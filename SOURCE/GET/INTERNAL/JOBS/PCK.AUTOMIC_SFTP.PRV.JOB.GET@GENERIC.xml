@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-15"?>
-<uc-export clientvers="11.0.0-sprint.20141111.1610+build.2828">
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBS_GENERIC AttrType="GENERIC" name="PCK.AUTOMIC_SFTP.PRV.JOB.GET@GENERIC">
 <XHEADER state="1">
 <Title/>
@@ -46,7 +45,7 @@
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
 <FcstStatus>0|U00000000 ??? ""</FcstStatus>
-<Ert>1</Ert>
+
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
 <ErtFix>0</ErtFix>
@@ -169,7 +168,26 @@ java -jar "&$AGENT_RESOURCES_CLIENT#/ARATools.jar" dirfilehandling GetFiles -prc
 <OSCRI/>
 </POST_SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC/>
+<DOC><![CDATA[This action is supported download files/directories via network by SFTP protocol from Source Server --> Staging Server and  Source Server --> Target Server: 
+
+For File Transfer, only files support wildcards. The following paths are valid:
+* /dir1/dir2/*.txt -> find all .txt file in /dir1/dir2/ . Find recursively if Include Subdirectory is set to YES
+
+###Examples:###
+
+* '''SFTP'''
+  * Scenario: Copy from automic@192.168.1.2:/home/uc4/directory -> Target Machine
+  * Parameters:
+    * Protocol: SFTP
+    * Source files/dir: directory
+    * Target files/dir: /opt/target_dir
+    * Staging agent: (blank) 
+    * Staging files/dir: (blank)
+    * SFTP session:
+      * Host: 192.168.1.2
+      * Port: 22 if not specified
+      * Username: automic
+      * Password: 123456]]></DOC>
 </DOCU_Docu>
 </JOBS_GENERIC>
 </uc-export>
