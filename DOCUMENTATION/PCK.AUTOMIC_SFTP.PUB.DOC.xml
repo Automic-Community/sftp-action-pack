@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-15"?>
-<uc-export clientvers="11.0.0-sprint.20141111.1610+build.2828">
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <DOCU name="PCK.AUTOMIC_SFTP.PUB.DOC">
 <HEADER state="1">
 <Title>Package documentation</Title>
@@ -8,7 +7,17 @@
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC/>
+<DOC><![CDATA[This action copy files/directories via network by SFTP protocol. 
+
+Recursive copy is also supported.
+
+=Setup=
+
+* ARATools.jar installed on the machine initiating the copy.
+
+=Rollback=
+
+The network copy actions do not support rollback yet.]]></DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>
