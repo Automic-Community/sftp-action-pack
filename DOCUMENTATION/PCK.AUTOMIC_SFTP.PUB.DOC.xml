@@ -9,15 +9,11 @@
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[This action copy files/directories via network by SFTP protocol. 
 
-Recursive copy is also supported.
+ Recursive copy is also supported.
 
-=Setup=
+ =Rollback=
 
-* ARATools.jar installed on the machine initiating the copy.
-
-=Rollback=
-
-The network copy actions do not support rollback yet.]]></DOC>
+ The network copy actions do not support rollback yet.]]></DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>
