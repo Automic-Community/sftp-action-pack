@@ -7,12 +7,8 @@
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[This package contains actions for executing SFTP commands.
-
- 
-
-PCK.AUTOMIC_SFTP 1.0.0 Release Notes
- + Recursive copy]]></DOC>
+<DOC><![CDATA[Contains actions to download files from an SFTP server.]]>
+</DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>
