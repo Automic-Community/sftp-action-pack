@@ -277,26 +277,12 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[This action is supported download files/directories via network by SFTP protocol from Source Server --> Staging Server and  Source Server --> Target Server: 
+<DOC><![CDATA[This package contains actions for executing SFTP commands.
 
-For File Transfer, only files support wildcards. The following paths are valid:
-* /dir1/dir2/*.txt -> find all .txt file in /dir1/dir2/ . Find recursively if Include Subdirectory is set to YES
+ 
 
-###Examples:###
-
-* '''SFTP'''
-  * Scenario: Copy from automic@192.168.1.2:/home/uc4/directory -> Target Machine
-  * Parameters:
-    * Protocol: SFTP
-    * Source files/dir: directory
-    * Target files/dir: /opt/target_dir
-    * Staging agent: (blank) 
-    * Staging files/dir: (blank)
-    * SFTP session:
-      * Host: 192.168.1.2
-      * Port: 22 if not specified
-      * Username: automic
-      * Password: 123456]]></DOC>
+PCK.AUTOMIC_SFTP 1.0.0 Release Notes
+ + Recursive copy]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
