@@ -1,0 +1,61 @@
+*** Settings ***
+Suite Setup       Suite Setup
+Force Tags        sftp export    valid    win    unix
+Test Template     Get Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+
+*** Test Cases ***    Source                                     User       Password       Recursive    Target
+Admin User Wildcards ? Case 1
+                      ${_WORKING_DIR}${/}source${/}Test?.*       root       ventum2011@    YES          ${_TARGET_DIR}${/}target
+
+Admin User Wildcards ? Case 2
+                      ${_WORKING_DIR}${/}source${/}????2.*       root       ventum2011@    YES          ${_TARGET__DIR}${/}target
+
+Admin User Wildcards ? Case 3
+                      ${_WORKING_DIR}${/}source${/}Test1?.pdf    root       ventum2011@    YES          ${_TARGET__DIR}${/}target
+
+Admin User Wildcards All Case 1
+                      ${_WORKING_DIR}${/}source${/}*             root       ventum2011@    YES          ${_TARGET__DIR}${/}target
+
+Admin User Wildcards All Case 2
+                      ${_WORKING_DIR}${/}source${/}*.pdf         root       ventum2011@    YES          ${_TARGET__DIR}${/}target
+
+Admin User Wildcards All Case 3
+                      ${_WORKING_DIR}${/}source${/}Test*         root       ventum2011@    YES          ${_TARGET__DIR}${/}target
+
+Access With Another User Wildcards *
+                      ${_WORKING_DIR}${/}source${/}*.pdf         automic    automic        YES          ${_TARGET__DIR}${/}target
+
+Recursive Yes         ${_WORKING_DIR}${/}source${/}*             root       ventum2011@    YES          ${_TARGET__DIR}${/}target
+
+*** Keywords ***
+Suite Setup
+    Init AE And Package
+    Init SFTP Server
+
+Get Template
+    [Arguments]    ${source}    ${user}    ${password}    ${recursive}    ${target}
+    Clean Up Directory    ${_TARGET_DIR}${/}target
+    Init Action    ${ACTION_GET}
+    Action Set    ${PRT_SFTP_HOST}    VVNSATSTNDRD02
+    #Action Set    ${PRT_SFTP_PORT}    139
+    Action Set    ${PRT_SFTP_SOURCE_FILES}    ${source}
+    Action Set    ${PRT_SFTP_USER}    ${user}
+    Action Set    ${PRT_SFTP_PWD}    ${password}
+    Action Set    ${PRT_SFTP_RECURSIVE_GET}    ${recursive}
+    #Action Set    ${PRT_SFTP_CONNECT_TIMEOUT}    5000
+    Action Set    ${PRT_SFTP_TGT_FILES_DIR}    ${target}
+    Action Set    ${PRT_SFTP_TGT_OVERWRITE}    YES
+    Action Set    ${PRT_SFTP_PRESERVE_ATT}    YES
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    0
+    Action Return Status Should Be    ${EndedOK}
+    #Action Report Should Contain    ${message}
+    Action Report Should Contain    START AT
+    #Action Report Should Contain    PARAMETER VALIDATION START
+    #Action Report Should Contain    EXECUTION START
+    Action Report Should Contain    ENDED AT
+    #Action Report Should Contain    RET-CODE
