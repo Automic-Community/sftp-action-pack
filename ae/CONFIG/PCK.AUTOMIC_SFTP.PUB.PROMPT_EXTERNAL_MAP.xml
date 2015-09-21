@@ -28,14 +28,14 @@
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_CONNECT_TIMEOUT#" Value="EXT:/source/sftp/connection_timeout" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_HOST#" Value="EXT:/source/sftp/host" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_OVERWRITE#" Value="EXT:/target/overwrite_target" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_PORT#" Value="EXT:/source/sftp/port" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_PRESERVE_ATT#" Value="EXT:/source/sftp/preserve_att" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_PWD#" Value="EXT:/source/sftp/password" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_RECURSIVE_GET#" Value="EXT:/source/sftp/recursive_download" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_SOURCE_FILES#" Value="EXT:/source/source_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_TGT_FILES_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_TGT_OVERWRITE#" Value="EXT:/target/overwrite_target" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_USER#" Value="EXT:/source/sftp/username" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_SFTP.PUB.ACTION.GET/UC4RB_SFTP_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
 </VARA>
 <DOCU_Docu state="1" type="text">
