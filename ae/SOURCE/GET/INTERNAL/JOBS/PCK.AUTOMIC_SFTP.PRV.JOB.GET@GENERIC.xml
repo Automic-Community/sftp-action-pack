@@ -44,7 +44,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -97,6 +97,10 @@
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[:INCLUDE PCK.AUTOMIC_SFTP.PRV.INCLUDE.ATTACH
+:SET &UC4RB_SFTP_RECURSIVE_GET# = STR_UC(&UC4RB_SFTP_RECURSIVE_GET#)
+:SET &UC4RB_SFTP_TGT_OVERWRITE# = STR_UC(&UC4RB_SFTP_TGT_OVERWRITE#)
+:SET &UC4RB_SFTP_PRESERVE_ATT# = STR_UC(&UC4RB_SFTP_PRESERVE_ATT#)
+
 :SWITCH &$PLATFORM#
 :CASE "WINDOWS"
 

@@ -7,8 +7,8 @@
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Contains actions to download files from an SFTP server.]]>
-</DOC>
+<DOC><![CDATA[Contains actions to download files from an SFTP server.
+]]></DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>

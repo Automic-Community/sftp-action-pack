@@ -58,12 +58,12 @@
 <UC4RB_SFTP_CONNECT_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_CONNECT_TIMEOUT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">5000</UC4RB_SFTP_CONNECT_TIMEOUTs.00>
 <UC4RB_SFTP_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_HOST#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PORT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">22</UC4RB_SFTP_PORTs.00>
-<UC4RB_SFTP_PRESERVE_ATTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PRESERVE_ATT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_PRESERVE_ATTs.00>
+<UC4RB_SFTP_PRESERVE_ATTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PRESERVE_ATT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_PRESERVE_ATTs.00>
 <UC4RB_SFTP_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PWD#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_RECURSIVE_GETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_RECURSIVE_GET#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_RECURSIVE_GETs.00>
 <UC4RB_SFTP_SOURCE_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_SOURCE_FILES#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_TGT_FILES_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_FILES_DIR#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
-<UC4RB_SFTP_TGT_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_OVERWRITE#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_TGT_OVERWRITEs.00>
+<UC4RB_SFTP_TGT_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_OVERWRITE#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_TGT_OVERWRITEs.00>
 <UC4RB_SFTP_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_USER#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -122,12 +122,12 @@
 <UC4RB_SFTP_CONNECT_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_CONNECT_TIMEOUT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">5000</UC4RB_SFTP_CONNECT_TIMEOUTs.00>
 <UC4RB_SFTP_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_HOST#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PORT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">22</UC4RB_SFTP_PORTs.00>
-<UC4RB_SFTP_PRESERVE_ATTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PRESERVE_ATT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_PRESERVE_ATTs.00>
+<UC4RB_SFTP_PRESERVE_ATTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PRESERVE_ATT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_PRESERVE_ATTs.00>
 <UC4RB_SFTP_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PWD#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_RECURSIVE_GETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_RECURSIVE_GET#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_RECURSIVE_GETs.00>
 <UC4RB_SFTP_SOURCE_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_SOURCE_FILES#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_TGT_FILES_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_FILES_DIR#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
-<UC4RB_SFTP_TGT_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_OVERWRITE#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_TGT_OVERWRITEs.00>
+<UC4RB_SFTP_TGT_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_OVERWRITE#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_TGT_OVERWRITEs.00>
 <UC4RB_SFTP_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_USER#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -172,12 +172,12 @@
 <UC4RB_SFTP_CONNECT_TIMEOUTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_CONNECT_TIMEOUT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">5000</UC4RB_SFTP_CONNECT_TIMEOUTs.00>
 <UC4RB_SFTP_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_HOST#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_PORTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PORT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">22</UC4RB_SFTP_PORTs.00>
-<UC4RB_SFTP_PRESERVE_ATTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PRESERVE_ATT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_PRESERVE_ATTs.00>
+<UC4RB_SFTP_PRESERVE_ATTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PRESERVE_ATT#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_PRESERVE_ATTs.00>
 <UC4RB_SFTP_PWDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_PWD#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_RECURSIVE_GETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_RECURSIVE_GET#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_RECURSIVE_GETs.00>
 <UC4RB_SFTP_SOURCE_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_SOURCE_FILES#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 <UC4RB_SFTP_TGT_FILES_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_FILES_DIR#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
-<UC4RB_SFTP_TGT_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_OVERWRITE#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_TGT_OVERWRITEs.00>
+<UC4RB_SFTP_TGT_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_TGT_OVERWRITE#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET">YES</UC4RB_SFTP_TGT_OVERWRITEs.00>
 <UC4RB_SFTP_USERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_SFTP_USER#" promptsetname="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -207,7 +207,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -249,6 +249,8 @@
 <PROMPTSET name="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET" ontop="1">
 <PRPTBOX promptset="PCK.AUTOMIC_SFTP.PRV.PROMPTSET.GET" prptmode="1">
 <UC4RB_SFTP_RECURSIVE_GETs.00 altview="0" haslist="0">YES</UC4RB_SFTP_RECURSIVE_GETs.00>
+<UC4RB_SFTP_TGT_OVERWRITEs.00 altview="0" haslist="0">YES</UC4RB_SFTP_TGT_OVERWRITEs.00>
+<UC4RB_SFTP_PRESERVE_ATTs.00 altview="0" haslist="0">YES</UC4RB_SFTP_PRESERVE_ATTs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
