@@ -1,0 +1,9 @@
+name: PCK.AUTOMIC_SFTP
+source: ae
+binaries:
+- object: RESOURCES/LIBS/PCK.AUTOMIC_SFTP.PRV.STORE
+  resources: 
+  - name: SFTPTOOL.JAR
+    type: BINARY
+    path: tools/sftp-tool/target/sftp-tool.jar
+    version: 1.0.0
