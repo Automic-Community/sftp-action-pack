@@ -26,14 +26,14 @@
 <Variables>
 <row Name="Categories" Value="Network, Download " Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Company" Value="Automic Software GmbH" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Dependencies" Value="PCK.ITPA_SHARED &gt;= 1.0.0" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Dependencies" Value="PCK.ITPA_SHARED ~= 1.1" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Description" Value="Download files from an SFTP server." Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Homepage" Value="www.automic.com" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="License" Value="" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Name" Value="PCK.AUTOMIC_SFTP" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Package Format Version" Value="0.1.0" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Title" Value="Automic SFTP" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Version" Value="1.0.0" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Version" Value="1.1.0" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
 </VARA>
 <DOCU_Docu state="1" type="text">
