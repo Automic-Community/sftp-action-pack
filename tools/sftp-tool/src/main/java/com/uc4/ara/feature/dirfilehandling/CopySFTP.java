@@ -73,11 +73,11 @@ public class CopySFTP extends AbstractCopy {
 
 		} catch (SftpException e){
 			FeatureUtil.logMsg(e.getMessage() + ". Error with the SFTP connection. Aborting ...");
-			return ErrorCodes.EXCEPTION;
+			return ErrorCodes.ERROR;
 
 		} catch (IOException e){
 			FeatureUtil.logMsg(e.getMessage() + ". Connection can not continue. Aborting ...");
-			return ErrorCodes.EXCEPTION;
+			return ErrorCodes.ERROR;
 
 		}catch (UserException e) {
 			FeatureUtil.logMsg(e.getMessage() + ". Aborting ...");
@@ -85,8 +85,7 @@ public class CopySFTP extends AbstractCopy {
 
 		}finally {
 			sftpWrapper.closeSftpChannel();
-			if (sftpWrapper != null)
-				sftpWrapper.closeSession();
+			sftpWrapper.closeSession();
 		}
 
 		return errorCode;
@@ -244,8 +243,7 @@ public class CopySFTP extends AbstractCopy {
 
 		} finally {
 			sftpWrapper.closeSftpChannel();
-			if (sftpWrapper != null)
-				sftpWrapper.closeSession();
+			sftpWrapper.closeSession();
 		}
 
 		return errorCode;
