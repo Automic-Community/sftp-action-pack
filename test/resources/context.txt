@@ -16,7 +16,7 @@ Init AE
 
 Init Win Server
     [Documentation]    TODO: Write server description here
-    Set Global Variable    ${_AGENT}    vvnwindows02
+    Set Global Variable    ${_AGENT}    VVNWINDOWS02
     Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    /opt/automic/testcases/PCK.AUTOMIC_SFTP
     Set Global Variable    ${_TARGET_DIR}    C:\\automic\\testcases\\PCK.AUTOMIC_SFTP
