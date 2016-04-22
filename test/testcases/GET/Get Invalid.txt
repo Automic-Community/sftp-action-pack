@@ -41,7 +41,3 @@ Get Template
     Action Report Should Contain    ${message}
     Action Report Should Contain    START AT
     Action Report Should Contain    Return Code: 999
-    #Action Report Should Contain    PARAMETER VALIDATION START
-    #Action Report Should Contain    EXECUTION START
-    #Action Report Should Contain    ABEND AT
-    #Action Report Should Contain    RET-CODE

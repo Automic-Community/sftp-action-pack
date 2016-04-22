@@ -4,12 +4,12 @@ Force Tags        sftp get    invalid    win    unix
 Test Template     Get Template
 Resource          ../../resources/keywords.txt
 
-*** Test Cases ***    Host              Port    Source                        User       Password       Timeout    Return Code    Message
-Wrong Source          vvnappserver01    \       ${_WORKING_DIR}${/}invalid    ftptest    ventum2011@    \          4              ${EMPTY}
+*** Test Cases ***    Host              Port    Source                        User    Password       Timeout    Return Code    Message
+Wrong Source          vvnappserver02    \       ${_WORKING_DIR}${/}invalid    root    ventum2011@    \          4              ${EMPTY}
 
 *** Keywords ***
 Suite Setup
-    Init AE And Package
+    Init AE
     Init SFTP Server
 
 Get Template
@@ -32,7 +32,3 @@ Get Template
     Action Return Status Should Be    ${EndedNotOK}
     Action Report Should Contain    ${message}
     Action Report Should Contain    START AT
-    #Action Report Should Contain    PARAMETER VALIDATION START
-    #Action Report Should Contain    EXECUTION START
-    #Action Report Should Contain    ABEND AT
-    #Action Report Should Contain    RET-CODE

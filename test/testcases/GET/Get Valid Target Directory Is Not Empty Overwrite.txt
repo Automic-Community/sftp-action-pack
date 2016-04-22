@@ -13,33 +13,28 @@ Get Overwrite Yes     YES           YES           0              ${EndedOK}     
 
 *** Keywords ***
 Suite Setup
-    Init AE And Package
+    Init AE
     Init SFTP Server
 
 Export Template
     [Arguments]    ${overwrite1}    ${overwrite2}    ${returnCode}    ${returnStatus}    ${message}
     Clean Up Directory    ${_TARGET_DIR}${/}target
     Init Action    ${ACTION_GET}
-    Action Set    ${PRT_SFTP_HOST}    vvnappserver01
-    #Action Set    ${PRT_SFTP_PORT}    139
+    Action Set    ${PRT_SFTP_HOST}    vvnappserver02
     Action Set    ${PRT_SFTP_SOURCE_FILES}    ${_WORKING_DIR}${/}source${/}Notes.zip
     Action Set    ${PRT_SFTP_USER}    root
     Action Set    ${PRT_SFTP_PWD}    ventum2011@
     Action Set    ${PRT_SFTP_RECURSIVE_GET}    YES
-    #Action Set    ${PRT_SFTP_CONNECT_TIMEOUT}    5000
     Action Set    ${PRT_SFTP_TGT_FILES_DIR}    ${_TARGET_DIR}${/}target
     Action Set    ${PRT_SFTP_TGT_OVERWRITE}    ${overwrite1}
     Action Set    ${PRT_SFTP_PRESERVE_ATT}    YES
     Action Execute
     Init Action    ${ACTION_GET}
-    Action Set    ${PRT_SFTP_HOST}    vvnappserver01
-    #Action Set    ${PRT_SFTP_PORT}    139
+    Action Set    ${PRT_SFTP_HOST}    vvnappserver02
     Action Set    ${PRT_SFTP_SOURCE_FILES}    ${_WORKING_DIR}${/}source${/}Notes.zip
-    #Action Set    ${PRT_SFTP_DOMAIN_NAME}
     Action Set    ${PRT_SFTP_USER}    root
     Action Set    ${PRT_SFTP_PWD}    ventum2011@
     Action Set    ${PRT_SFTP_RECURSIVE_GET}    YES
-    #Action Set    ${PRT_SFTP_CONNECT_TIMEOUT}    5000
     Action Set    ${PRT_SFTP_TGT_FILES_DIR}    ${_TARGET_DIR}${/}target
     Action Set    ${PRT_SFTP_TGT_OVERWRITE}    ${overwrite2}
     Action Set    ${PRT_SFTP_PRESERVE_ATT}    YES
@@ -49,7 +44,4 @@ Export Template
     Action Return Status Should Be    ${returnStatus}
     Action Report Should Contain    ${message}
     Action Report Should Contain    START AT
-    #Action Report Should Contain    PARAMETER VALIDATION START
-    #Action Report Should Contain    EXECUTION START
     Action Report Should Contain    ENDED AT
-    #Action Report Should Contain    RET-CODE
