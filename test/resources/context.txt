@@ -11,13 +11,12 @@ ${_WORKING_DIR}    /
 ${_TARGET_DIR}    /
 
 *** Key Words ***
-Init AE And Package
-    #Prepare Package    PCK.AUTOMIC_SFTP
+Init AE
     Action Connect    ${_AE_HOST}    ${_AE_PORT}    ${_AE_USER}    ${_AE_PASS}    ${_AE_TEMP_FOLD}
 
 Init Win Server
     [Documentation]    TODO: Write server description here
-    Set Global Variable    ${_AGENT}    FL01AT03
+    Set Global Variable    ${_AGENT}    vvnwindows02
     Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    /opt/automic/testcases/PCK.AUTOMIC_SFTP
     Set Global Variable    ${_TARGET_DIR}    C:\\automic\\testcases\\PCK.AUTOMIC_SFTP
@@ -25,7 +24,7 @@ Init Win Server
 
 Init Unix Server
     [Documentation]    TODO: Write server description here
-    Set Global Variable    ${_AGENT}    SD02AT03
+    Set Global Variable    ${_AGENT}    vvnunix02
     Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    /opt/automic/testcases/PCK.AUTOMIC_SFTP
     Set Global Variable    ${_TARGET_DIR}    /opt/automic/testcases/PCK.AUTOMIC_SFTP

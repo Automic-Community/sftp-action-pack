@@ -5,19 +5,19 @@ Test Template     Get Template
 Resource          ../../resources/keywords.txt
 
 *** Test Cases ***    Host                     Port        Source                       User        Password        Timeout    Message
-Wrong Host            VVNSATSTNDRD02INVALID    \           ${_WORKING_DIR}${/}source    automic     automic         \          ${SessionCannotBeOpened}
+Wrong Host            vvnappserver01invalid    \           ${_WORKING_DIR}${/}source    automic     automic         \          ${SessionCannotBeOpened}
 
-Wrong Port            VVNSATSTNDRD02           13999999    ${_WORKING_DIR}${/}source    automic     automic         \          ${SessionCannotBeOpened}
+Wrong Port            vvnappserver01           13999999    ${_WORKING_DIR}${/}source    automic     automic         \          ${SessionCannotBeOpened}
 
-Wrong User            VVNSATSTNDRD02           \           ${_WORKING_DIR}${/}source    automic1    automic         \          ${EMPTY}
+Wrong User            vvnappserver01           \           ${_WORKING_DIR}${/}source    automic1    automic         \          ${EMPTY}
 
-Wrong Password        VVNSATSTNDRD02           \           ${_WORKING_DIR}${/}source    root        ventum2011@1    10         ${EMPTY}
+Wrong Password        vvnappserver01           \           ${_WORKING_DIR}${/}source    root        ventum2011@1    10         ${EMPTY}
 
-Anonymous User        VVNSATSTNDRD02           \           ${_WORKING_DIR}${/}source    \           \               5          ${SessionCannotBeOpened}
+Anonymous User        vvnappserver01           \           ${_WORKING_DIR}${/}source    \           \               5          ${SessionCannotBeOpened}
 
 *** Keywords ***
 Suite Setup
-    Init AE And Package
+    Init AE
     Init SFTP Server
 
 Get Template

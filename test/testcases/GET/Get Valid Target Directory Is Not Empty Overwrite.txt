@@ -20,7 +20,7 @@ Export Template
     [Arguments]    ${overwrite1}    ${overwrite2}    ${returnCode}    ${returnStatus}    ${message}
     Clean Up Directory    ${_TARGET_DIR}${/}target
     Init Action    ${ACTION_GET}
-    Action Set    ${PRT_SFTP_HOST}    VVNSATSTNDRD02
+    Action Set    ${PRT_SFTP_HOST}    vvnappserver01
     #Action Set    ${PRT_SFTP_PORT}    139
     Action Set    ${PRT_SFTP_SOURCE_FILES}    ${_WORKING_DIR}${/}source${/}Notes.zip
     Action Set    ${PRT_SFTP_USER}    root
@@ -32,7 +32,7 @@ Export Template
     Action Set    ${PRT_SFTP_PRESERVE_ATT}    YES
     Action Execute
     Init Action    ${ACTION_GET}
-    Action Set    ${PRT_SFTP_HOST}    VVNSATSTNDRD02
+    Action Set    ${PRT_SFTP_HOST}    vvnappserver01
     #Action Set    ${PRT_SFTP_PORT}    139
     Action Set    ${PRT_SFTP_SOURCE_FILES}    ${_WORKING_DIR}${/}source${/}Notes.zip
     #Action Set    ${PRT_SFTP_DOMAIN_NAME}

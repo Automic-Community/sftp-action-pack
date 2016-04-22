@@ -31,7 +31,7 @@ Get Template
     [Arguments]    ${source}    ${user}    ${password}    ${recursive}    ${target}
     Clean Up Directory    ${_TARGET_DIR}${/}target
     Init Action    ${ACTION_GET}
-    Action Set    ${PRT_SFTP_HOST}    VVNSATSTNDRD02
+    Action Set    ${PRT_SFTP_HOST}    vvnappserver01
     #Action Set    ${PRT_SFTP_PORT}    139
     Action Set    ${PRT_SFTP_SOURCE_FILES}    ${source}
     Action Set    ${PRT_SFTP_USER}    ${user}

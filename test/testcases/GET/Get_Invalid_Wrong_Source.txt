@@ -4,8 +4,8 @@ Force Tags        sftp get    invalid    win    unix
 Test Template     Get Template
 Resource          ../../resources/keywords.txt
 
-*** Test Cases ***    Host              Port    Source                        User       Password    Timeout    Return Code    Message
-Wrong Source          VVNSATSTNDRD02    \       ${_WORKING_DIR}${/}invalid    automic    automic     \          4              ${EMPTY}
+*** Test Cases ***    Host              Port    Source                        User       Password       Timeout    Return Code    Message
+Wrong Source          vvnappserver01    \       ${_WORKING_DIR}${/}invalid    ftptest    ventum2011@    \          4              ${EMPTY}
 
 *** Keywords ***
 Suite Setup
