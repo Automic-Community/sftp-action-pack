@@ -24,7 +24,7 @@ Init Win Server
 
 Init Unix Server
     [Documentation]    TODO: Write server description here
-    Set Global Variable    ${_AGENT}    vvnunix02
+    Set Global Variable    ${_AGENT}    VVNUNIX02
     Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    /opt/automic/testcases/PCK.AUTOMIC_SFTP
     Set Global Variable    ${_TARGET_DIR}    /opt/automic/testcases/PCK.AUTOMIC_SFTP

@@ -5,3 +5,6 @@ config.yml
 /tools/sftp-tool/target
 /tools/sftp-tool/.classpath
 /tools/sftp-tool/.project
+
+.sonar
+.sonar
