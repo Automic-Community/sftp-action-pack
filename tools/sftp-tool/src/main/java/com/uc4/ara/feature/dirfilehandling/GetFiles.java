@@ -104,7 +104,6 @@ public class GetFiles extends AbstractPublicFeature {
 
     }
 
-
     /*
      * (non-Javadoc)
      * 
