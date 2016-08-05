@@ -129,6 +129,7 @@ java -jar "&$AGENT_RESOURCES_CLIENT#sftp-tool.jar" dirfilehandling GetFiles -prc
 
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_CMDLINE_CMD@WINDOWS
 
+
 :CASE "UNIX"
 
 :SET &UC4RB_CONVERTED_STRING# = &UC4RB_SFTP_SOURCE_FILES#
@@ -171,6 +172,8 @@ java -jar "&$AGENT_RESOURCES_CLIENT#sftp-tool.jar" dirfilehandling GetFiles -prc
 </POST_SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[This package contains actions for executing SFTP commands.
+
+ 
 
 PCK.AUTOMIC_SFTP 1.0.0 Release Notes
  + Recursive copy]]></DOC>
