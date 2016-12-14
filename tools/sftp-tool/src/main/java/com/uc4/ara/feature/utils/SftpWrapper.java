@@ -1,12 +1,6 @@
 
 package com.uc4.ara.feature.utils;
 
-import it.sauronsoftware.ftp4j.FTPAbortedException;
-import it.sauronsoftware.ftp4j.FTPDataTransferException;
-import it.sauronsoftware.ftp4j.FTPException;
-import it.sauronsoftware.ftp4j.FTPIllegalReplyException;
-import it.sauronsoftware.ftp4j.FTPListParseException;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -300,7 +294,7 @@ public class SftpWrapper {
 
 	public List<String> listFile(String remoteDir) throws SftpException {
 		List entries = new Vector<LsEntry>();
-		List<String> files = new ArrayList<String>();
+		List<String> files = new ArrayList<>();
 
 		entries =channelSftp.ls(remoteDir);
 		for(Object entry : entries){
@@ -353,7 +347,7 @@ public class SftpWrapper {
 	}
 
 	public boolean createDirectoryRecursive(String dirPath)
-			throws IOException, IllegalStateException, FTPIllegalReplyException, FTPException, FTPDataTransferException, FTPAbortedException, FTPListParseException {
+			throws IOException, IllegalStateException {
 		dirPath = dirPath.replaceAll("\\\\", "/");
 		dirPath = FileUtil.normalize(dirPath);
 		String[] dirs = dirPath.split("/+");
