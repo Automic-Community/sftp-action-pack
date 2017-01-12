@@ -1,6 +1,6 @@
 *** Settings ***
 Suite Setup       Suite Setup
-Force Tags        sftp export    valid    win    unix
+Force Tags        sftp export    valid    win    unix    SMOKE_TEST
 Test Template     Get Template
 Resource          ../../resources/keywords.txt
 
