@@ -25,7 +25,6 @@ public class CopySFTP extends AbstractCopy {
 
 	@Override
 	public int retrieve() {
-
 		from = from.replaceAll("\\\\", "/");
 		from = FileUtil.normalize(from);
 		if (port == -1) port = 22;
@@ -46,26 +45,18 @@ public class CopySFTP extends AbstractCopy {
 		}
 
 		File localFile = new File(to);
-
-
-
 		try {
 			createParentDir(localFile);
-
 			if(from.contains("*") || from.contains("?"))
 				deepRetrieveWildCard(sftpWrapper, localFile);
-
 			else if (sftpWrapper.isDirectory(from))
 				deepRetrieve(sftpWrapper, from + "/", localFile);
-
 			else if(sftpWrapper.isFile(from)) {
 				if(from.endsWith("/"))
 					from = from.substring(0, from.length() - 1 );
 				if(localFile.isDirectory())
 					localFile = new File(localFile, from.substring(from.lastIndexOf("/"), from.length()));
-
 				singleFileRetrieve(sftpWrapper, from, localFile);
-
 			} else {
 				FeatureUtil.logMsg("'" + path + FileUtil.normalize(from) + "' does not exist. Aborting ...");
 				errorCode = ErrorCodes.ERROR;
@@ -74,7 +65,6 @@ public class CopySFTP extends AbstractCopy {
 		} catch (SftpException e){
 			FeatureUtil.logMsg(e.getMessage() + ". Error with the SFTP connection. Aborting ...");
 			return ErrorCodes.ERROR;
-
 		} catch (IOException e){
 			FeatureUtil.logMsg(e.getMessage() + ". Connection can not continue. Aborting ...");
 			return ErrorCodes.ERROR;
@@ -87,14 +77,11 @@ public class CopySFTP extends AbstractCopy {
 			sftpWrapper.closeSftpChannel();
 			sftpWrapper.closeSession();
 		}
-
 		return errorCode;
 	}
 
 	private void deepRetrieve(SftpWrapper sftpWrapper, String from, File localFile) throws IOException, SftpException {
-
 		List<String> files = new ArrayList<String>();
-
 		if(localFile.isFile() ) {
 			if(overwrite) {
 				FeatureUtil.logMsg("'" + localFile.getAbsolutePath() + "' already exists. Deleting ...");
@@ -107,7 +94,6 @@ public class CopySFTP extends AbstractCopy {
 		}
 
 		if(!localFile.exists() ) localFile.mkdir();
-
 		files = sftpWrapper.listFile(from);
 
 		for(String file : files) {
@@ -119,13 +105,11 @@ public class CopySFTP extends AbstractCopy {
 			} else
 				singleFileRetrieve(sftpWrapper, from + file, new File(localFile, file));
 		}
-
 	}
 
 	private void deepRetrieveWildCard(SftpWrapper sftpWrapper, File localFile)
 			throws IOException, SftpException, UserException {
 		String srcRemote = FileUtil.getSourceWildCard(from);
-
 		List<String> files = getFilesWildCard(sftpWrapper,"", from);
 
 		for (String file : files) {
@@ -141,9 +125,7 @@ public class CopySFTP extends AbstractCopy {
 		}
 	}
 
-
 	private void singleFileRetrieve(SftpWrapper sftpWrapper, String from, File f) throws IOException, SftpException {
-
 		if(f.exists()){
 			if(overwrite){
 				FeatureUtil.logMsg("'" + f.getCanonicalPath() + "' already exists. Deleting ...");
@@ -156,9 +138,7 @@ public class CopySFTP extends AbstractCopy {
 		}
 
 		FeatureUtil.logMsg("Copying '" + path + FileUtil.normalize(from) + "' => '" + f.getAbsolutePath() + "'");
-
 		sftpWrapper.readFile(from, f.getAbsolutePath(), preserve);
-
 	}
 
 	private List<String> getFilesWildCard(SftpWrapper sftpWrapper, String currentPath, String nextPath)
@@ -194,10 +174,8 @@ public class CopySFTP extends AbstractCopy {
 		return listFiles;
 	}
 
-
 	@Override
 	public int store() throws Exception {
-
 		to = to.replaceAll("\\\\", "/");
 		to = FileUtil.normalize(to);
 		if (port == -1)
@@ -215,32 +193,27 @@ public class CopySFTP extends AbstractCopy {
 					+ ". Session can not be opened. Maybe the host, port, username or password is incorrect. Aborting ... ");
 			return ErrorCodes.EXCEPTION;
 		}
+		
 		//Create parent directory
 		String parent = FileUtil.normalize(to + "/../");
 		sftpWrapper.createDirectoryRecursive(parent);
-
 		File localFile = new File(from);
 
 		try{
-			if (localFile.isDirectory())
+			if (localFile.isDirectory()) {
 				deepStore(sftpWrapper, localFile, to);
-
+			}
 			else if(localFile.isFile()) {
-
 				if(sftpWrapper.isDirectory(to))
 					to = to + "/" + localFile.getName();
-
 				singleFileStore(sftpWrapper, localFile, to);
-
 			} else {
 				FeatureUtil.logMsg(localFile.getAbsolutePath() + " does not exists. Please check the path again. Aborting ...");
 				errorCode = ErrorCodes.ERROR;
 			}
-
 		} catch (SftpException e){
 			FeatureUtil.logMsg(e.getMessage() + ". Error with the SFTP connection. Aborting ...");
 			errorCode = ErrorCodes.EXCEPTION;
-
 		} finally {
 			sftpWrapper.closeSftpChannel();
 			sftpWrapper.closeSession();
@@ -250,7 +223,6 @@ public class CopySFTP extends AbstractCopy {
 	}
 
 	private void deepStore(SftpWrapper sftpWrapper, File localFile, String to) throws IOException, SftpException {
-
 		if(sftpWrapper.isFile(to)) {
 			if(overwrite) {
 				FeatureUtil.logMsg("'" + path + FileUtil.normalize(to) + "' already exists!. Deleting ...");
@@ -260,22 +232,19 @@ public class CopySFTP extends AbstractCopy {
 						localFile.getAbsolutePath()  +"' is a DIRECTORY ( overwrite is NO ). Skipping ...");
 				return;
 			}
-
 		}
 		sftpWrapper.createDirectory(to);
-
+		
 		for (File file : localFile.listFiles()) {
-
 			if (file.isDirectory() && recursive)
 				deepStore(sftpWrapper, file, to + "/" + file.getName() + "/");
 
-			else if(file.isFile()) singleFileStore(sftpWrapper, file, to + "/" +file.getName());
+			else if(file.isFile()) 
+				singleFileStore(sftpWrapper, file, to + "/" +file.getName());
 		}
-
 	}
 
 	private void singleFileStore(SftpWrapper sftpWrapper, File localFile, String to)	throws IOException, SftpException {
-
 		if(sftpWrapper.isExisted(to)){
 			if(overwrite){
 				FeatureUtil.logMsg("'" + path + FileUtil.normalize(to) + "' already exists. Deleting ...");
@@ -287,11 +256,6 @@ public class CopySFTP extends AbstractCopy {
 		}
 
 		FeatureUtil.logMsg("Copying '"+ localFile.getAbsolutePath() + "' => '" + path + FileUtil.normalize(to)  + "'");
-
-		sftpWrapper.writeFile(localFile.getAbsolutePath(), to);
-
+		sftpWrapper.writeFile(localFile.getAbsolutePath(), to, preserve);
 	}
-
-
-
 }

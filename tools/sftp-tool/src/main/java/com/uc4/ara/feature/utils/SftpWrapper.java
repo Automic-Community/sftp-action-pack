@@ -3,9 +3,17 @@ package com.uc4.ara.feature.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileTime;
+import java.nio.file.attribute.PosixFilePermission;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.Vector;
+import java.util.concurrent.TimeUnit;
 
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.ChannelSftp.LsEntry;
@@ -277,7 +285,82 @@ public class SftpWrapper {
 			throws SftpException {
 
 		channelSftp.put(localFile, remoteFile);
+	}
+	
+	public void writeFile(String localFile, String remoteFile, boolean preserve)
+			throws SftpException, IOException {
+		channelSftp.put(localFile, remoteFile);
+		Path lFile = Paths.get(localFile);
+		BasicFileAttributes attributes = Files.readAttributes(lFile, BasicFileAttributes.class);
+		FileTime lastModifiedTime = attributes.lastModifiedTime();
+		FileTime lastAccessTime = attributes.lastAccessTime();
+		int permissions = getOctalPermissions(lFile);
+		
+		if (preserve) {
+			SftpATTRS fileAttr = channelSftp.lstat(remoteFile);
+			fileAttr.setPERMISSIONS(permissions);
+			fileAttr.setACMODTIME((int)lastAccessTime.to(TimeUnit.SECONDS), (int)lastModifiedTime.to(TimeUnit.SECONDS));
+			channelSftp.setStat(remoteFile, fileAttr);
+		}
+	}
 
+	private static int getOctalPermissions(Path path) throws IOException {
+		String osName = System.getProperty("os.name").toLowerCase();
+		int owner = 0;
+		int group = 0;
+		int others = 0;
+		
+		if (osName.startsWith("windows")) {
+			boolean executable = Files.isExecutable(path);
+			boolean writable = Files.isWritable(path);
+			boolean readable = Files.isReadable(path);
+			if (executable) {
+				owner += 1;
+			}
+			if (writable) {
+				owner += 2;
+			}
+			if (readable) {
+				owner += 4;
+			}
+		} else {
+			Set<PosixFilePermission> set = Files.getPosixFilePermissions(path);
+			for (PosixFilePermission permission : set) {
+				switch (permission) {
+				case OWNER_EXECUTE:
+					owner += 1;
+					break;
+				case OWNER_WRITE:
+					owner += 2;
+					break;
+				case OWNER_READ:
+					owner += 4;
+					break;
+				case GROUP_EXECUTE:
+					group += 1;
+					break;
+				case GROUP_WRITE:
+					group += 2;
+					break;
+				case GROUP_READ:
+					group += 4;
+					break;
+				case OTHERS_EXECUTE:
+					others += 1;
+					break;
+				case OTHERS_WRITE:
+					others += 2;
+					break;
+				case OTHERS_READ:
+					others += 4;
+					break;
+				default:
+					break;
+				}
+			}
+		}
+		int permissions = (owner * 8 + group) * 8 + others;
+        return permissions;
 	}
 
 	public void removeFile(String remoteFile) throws SftpException {
@@ -286,11 +369,9 @@ public class SftpWrapper {
 	}
 
 
-
 	public void removeDir(String remoteDir) throws SftpException {
 		channelSftp.rmdir(remoteDir);
 	}
-
 
 	public List<String> listFile(String remoteDir) throws SftpException {
 		List entries = new Vector<LsEntry>();
@@ -362,11 +443,9 @@ public class SftpWrapper {
 
 				}else if(!isDirectory(currentDir))
 					createDirectory(currentDir );
-
 			}
 		}
 		return true;
-
 	}
 
 	/**
